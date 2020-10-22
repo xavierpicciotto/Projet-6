@@ -41,7 +41,7 @@ function addVote(array, voteValue, user) {
             usersLiked: array
         } : voteValue === -1 ?
         update = {
-            //Si l'utilisateur a disiké la sauce.
+            //Si l'utilisateur a disliké la sauce.
             dislikes: arrayLength,
             usersDisliked: array,
         } : console.log(`error on the update vote of ${user}`);
