@@ -6,6 +6,7 @@ const MIME_TYPES = {
   'image/png': 'png'
 };
 
+// Configuration du stockage des fichiers et le nom + l'extention.
 const storage = multer.diskStorage({
   destination: (req, file, callback) => {
     callback(null, 'images');
