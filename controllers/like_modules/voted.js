@@ -30,15 +30,18 @@ const voted = (sauce, voteValue, user) => {
     return
 }
 
+//Renvoie les modification de la sauce, like et dislike.
 function addVote(array, voteValue, user) {
     array.push(user);
     const arrayLength = array.length;
     voteValue === choice.LIKE ?
         update = {
+            //Si l'utilisateur a liké la sauce.
             likes: arrayLength,
             usersLiked: array
         } : voteValue === -1 ?
         update = {
+            //Si l'utilisateur a disiké la sauce.
             dislikes: arrayLength,
             usersDisliked: array,
         } : console.log(`error on the update vote of ${user}`);
@@ -46,15 +49,18 @@ function addVote(array, voteValue, user) {
     return update
 };
 
+//Permet de réinitialiser le vote d'un utilisateur, like ou dislike.
 function removeVote(array, indicator, index, user) {
     array.splice(index, 1);
     const arrayLength = array.length;
     indicator === "like" ?
         update = {
+            //Si l'utilisateur retire son like.
             likes: arrayLength,
             usersLiked: array
         } : indicator === "dislike" ?
         update = {
+            //Si l'utilisateur retire son dislike.
             dislikes: arrayLength,
             usersDisliked: array
         } : console.log(`Error on the withdrawal of the vote of ${user} :(`)
