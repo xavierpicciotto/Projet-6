@@ -1,6 +1,7 @@
 const express = require('express');
 const router = express.Router();
 
+//Importation des Middlewares et des fonctions de controle.
 const saucesCtrl = require('../controllers/sauces');
 const auth = require('../middleware/auth');
 const multer = require('../middleware/multer-config');
